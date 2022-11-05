@@ -5,8 +5,6 @@ const http = require('http');
 const logger = require('morgan');
 const path = require('path');
 const { auth } = require('express-openid-connect');
-const User = require("./models/User");
-const Strava = require("./models/Strava");
 const db = require('cyclic-dynamodb')
 const app = express()
 
