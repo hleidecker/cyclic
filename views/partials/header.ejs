@@ -20,13 +20,6 @@
                 <% if (locals.user) { %>
                     <a  href="/profile" 
                         class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4">Profile</a>
-                    <% if (locals.strava.access_token) { %>
-                        <a  href="/strava/activities" 
-                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4">Activities</a>                        
-                    <% } else { %>    
-                        <a  href="/strava/authorize" 
-                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4">Connect Strava</a>
-                    <% } %>
                     <a  href="/logout" 
                         class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4">Logout</a>
                 <% } else { %>
