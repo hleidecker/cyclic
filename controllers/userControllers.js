@@ -4,7 +4,8 @@ exports.getAllUsers = async (req, res, next) => {
   try {
     //const [users, _] = await User.findAll();
 
-    res.status(200).json({ count: users.length, users });
+    //res.status(200).json({ count: users.length, users });
+    res.status(200).json({ message: `All users requested` });
   } catch (error) {
     next(error);
   }
@@ -28,7 +29,8 @@ exports.getUserBySub = async (req, res, next) => {
 
     //let [user, _] = await User.findBySub(userSub);
 
-    res.status(200).json({ user: user[0] });
+    //res.status(200).json({ user: user[0] });
+    res.status(200).json({ message: `Single user requested` });
   } catch (error) {
     next(error);
   }
