@@ -2,7 +2,7 @@
 
 exports.getAllUsers = async (req, res, next) => {
   try {
-    const [users, _] = await User.findAll();
+    //const [users, _] = await User.findAll();
 
     res.status(200).json({ count: users.length, users });
   } catch (error) {
@@ -26,7 +26,7 @@ exports.getUserBySub = async (req, res, next) => {
   try {
     let userSub = req.params.sub;
 
-    let [user, _] = await User.findBySub(userSub);
+    //let [user, _] = await User.findBySub(userSub);
 
     res.status(200).json({ user: user[0] });
   } catch (error) {
