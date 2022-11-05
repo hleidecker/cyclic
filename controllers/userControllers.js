@@ -1,4 +1,4 @@
-const User = require("../models/User");
+//const User = require("../models/User");
 
 exports.getAllUsers = async (req, res, next) => {
   try {
@@ -13,9 +13,8 @@ exports.getAllUsers = async (req, res, next) => {
 exports.createNewUser = async (req, res, next) => {
   try {
     let { sub } = req.sub;
-    let user = new User(sub);
-
-    user = await user.save();
+    //let user = new User(sub);
+    //user = await user.save();
 
     res.status(201).json({ message: "User created" });
   } catch (error) {
