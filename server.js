@@ -27,7 +27,7 @@ app.use(auth(config));
 
 // Middleware to make the `user` object available for all views
 app.use(async function (req, res, next) {
-  res.locals.user = new req.oidc.user;
+  res.locals.user = req.oidc.user;
   //res.locals.user = new User(req.oidc.user);
   //res.locals.strava = new Strava(typeof req.oidc.user === 'undefined' ? undefined : req.oidc.user.sub)
   await res.locals.strava.load();
